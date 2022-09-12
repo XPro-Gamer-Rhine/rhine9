@@ -68,7 +68,9 @@ const Portfolio = () => {
                           rel="noopener noreferrer"
                         >
                           <img
-                            src={post.images[0]}
+                            src={post.images?.length > 0
+                                          ? post.images[0]
+                                          : ''}
                             alt={post.title}
                           />
                         </Link>
